@@ -32,7 +32,7 @@ end
 -- run js code
 function runjscode()
 	-- TODO: build if typescript
-	-- TODO: run typescript
+	-- TODO: run typescript/
 end
 -- run java code
 function runjavacode()
@@ -124,3 +124,17 @@ vim.keymap.set('n', '<F5>', function () runthefuckingcode() end)
 	-- TODO: use <F4> to autocomplete
 -- TODO: add a thing that gets a keyword of a given language from cht.sh
 vim.keymap.set('n', '<F8>', '/TODO<Enter>dd')
+
+function helloworld()
+	print("xd")
+end
+-- wonky af
+vim.cmd(":command Hello :call helloworld()")
+vim.cmd(":command Compileprojectwithgcc :!gcc *.c")
+vim.api.nvim_create_user_command('Duckduckgo',
+	function(opts)
+		local perkele = ":!w3m $(w3m duckduckgo.com/?q="..opts.fargs[1].." | grep \"www.\" | dmenu -l 30 | tr -d ' ') > duckduckgosearch.txt"
+		vim.cmd(perkele)
+		vim.cmd(":e duckduckgosearch.txt")
+	end,
+	{ nargs = 1 })
