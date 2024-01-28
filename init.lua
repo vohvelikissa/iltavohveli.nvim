@@ -69,6 +69,8 @@ end
 vim.keymap.set('n', 'å', ':tabnew<Return>:echo "OwO a newie bewie tab got created just nowwww"<Return>')
 vim.keymap.set('n', 'ö', ':tabprevious<Return>:echo "UwU you look strong with those fast fingers"<Return>')
 vim.keymap.set('n', 'ä', ':tabclose<Return>:echo "UwO why delete when you can just go back?"<Return>')
+vim.keymap.set('n','j','gj')
+vim.keymap.set('n','k','gk')
 vim.cmd(":set mouse=")
 vim.cmd(":set colorcolumn=80")
 vim.cmd(":set number")
@@ -103,7 +105,7 @@ require("lazy").setup({
       			-- configuration ...
     		})
   	end
-	}	
+	}
 })
 -- TODO: include a plugin for handling lsp shit
 	-- TODO: C
