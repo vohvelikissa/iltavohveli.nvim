@@ -1,0 +1,48 @@
+session_name: My perfect setup
+windows:
+  - window_name: nvim
+    layout: tiled
+    panes:
+      - shell_command:
+          - nvim
+  - window_name: IRC
+    layout: tiled
+    panes:
+      - shell_command:
+          - irssi -n rawrxdfuckme -c irc.ircnet.com
+      - shell_command:
+          - irssi -n itdoreallybeme -c irc.ircnet.com
+      - shell_command:
+          - irssi -n whatintheworld -c irc.libera.chat
+      - shell_command:
+          - irssi -n somebodywhooncetoldyou -c irc.libera.chat
+  - window_name: w3m browsing
+    layout: tiled
+    panes:
+      - shell_command:
+          - w3m duckduckgo.com
+  - window_name: code commands
+    layout: tiled
+    panes:
+      - shell_command:
+          - curl cht.sh
+  - window_name: other commands
+    layout: tiled
+    panes:
+      - shell_command:
+          - systemctl --user restart pulseaudio
+      - shell_command:
+          - brave-browser
+  - window_name: gaming
+    layout: tiled
+    panes:
+      - shell_command:
+          - flatpak run com.valvesoftware.Steam
+  - window_name: music
+    layout: tiled
+    panes:
+      - shell_command:
+          - cd ~/Music
+          - mpv *
+  - window_name: server shit
+    layout: tiled
